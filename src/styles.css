@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    font: normal normal normal 12pt/14.4pt medium;
+    font-family: sans-serif;
+}
+.coldetail{
+ font: bold;
+}
+.narrow{
+    width: 65%;
+}

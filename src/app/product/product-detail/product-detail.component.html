@@ -1,0 +1,18 @@
+<span class="pageTitle">Product Detail </span>
+    <span class="create"> | <a routerLink="/product/edit"></a> Edit</span>
+<div>
+<table *ngIf="product" class="table table-sm">
+    <tr><td>Name</td><td>{{product.name}}</td></tr>
+    <tr><td>Price</td><td>{{product.price}}</td></tr>
+    <tr><td>Unit</td><td>{{product.unit}}</td></tr>
+    <tr><td>Photopath</td><td>{{product.state}}</td></tr>
+    <tr><td>Active?</td><td>{{product.active}}</td></tr>
+</table>
+<button (click)="setVerify()" class="btn btn-danger">SetDelete</button>
+<span *ngIf="verify">
+  <span>|</span>
+  <button (click)="delete()" class="btn btn-danger">VerifyDelete</button>
+</span>
+<span>|</span>
+<a routerLink="/product/list">Return To list</a>
+</div>
