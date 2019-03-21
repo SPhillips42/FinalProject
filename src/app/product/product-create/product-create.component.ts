@@ -30,7 +30,6 @@ save():void{
     private productsvc: ProductService,
     private vendorsvc: Vendor1,
     private router: Router,
-    private route: ActivatedRoute,
   ) { }
 
   ngOnInit() {

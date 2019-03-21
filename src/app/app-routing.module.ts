@@ -13,6 +13,14 @@ import {ProductListComponent} from './product/product-list/product-list.componen
 import {ProductCreateComponent} from './product/product-create/product-create.component';
 import {ProductEditComponent} from './product/product-edit/product-edit.component';
 import {ProductDetailComponent} from './product/product-detail/product-detail.component';
+import {RequestListComponent} from './request/request-list/request-list.component';
+import {RequestCreateComponent} from './request/request-create/request-create.component';
+import {RequestEditComponent} from './request/request-edit/request-edit.component';
+import {RequestDetailComponent} from './request/request-detail/request-detail.component';
+import {RequestLineListComponent} from './requestLine/requestLine-list/requestLine-list.component';
+import {RequestLineCreateComponent} from './requestLine/requestLine-create/requestLine-create.component';
+import {RequestLineEditComponent} from './requestLine/requestLine-edit/requestLine-edit.component';
+import {RequestLineDetailComponent} from './requestLine/requestLine-detail/requestLine-detail.component';
 
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
@@ -26,14 +34,26 @@ const routes: Routes = [
   {path: 'user/create', component: UserCreateComponent},
   {path: 'user/edit/:id', component: UserEditComponent},
   {path: 'user/detail/:id', component: UserDetailComponent},
+
   {path: 'vendor/list', component: VendorListComponent},
   {path: 'vendor/create', component: VendorCreateComponent},
   {path: 'vendor/edit/:id', component: VendorEditComponent},
   {path: 'vendor/detail/:id', component: VendorDetailComponent},
+
   {path: 'product/list', component: ProductListComponent},
   {path: 'product/create', component: ProductCreateComponent},
   {path: 'product/edit/:id', component: ProductEditComponent},
   {path: 'product/detail/:id', component: ProductDetailComponent},
+
+  {path: 'requests/list', component: RequestListComponent},
+  {path: 'requests/create', component: RequestCreateComponent},
+  {path: 'requests/edit/:id', component: RequestEditComponent},
+  {path: 'requests/detail/:id', component: RequestDetailComponent},
+
+  {path: 'requestsLine/list/:prid', component: RequestLineListComponent},
+  {path: 'requestsLine/create/:prid', component: RequestLineCreateComponent},
+  {path: 'requestsLine/edit/:id', component: RequestLineEditComponent},
+  {path: 'requestsLine/detail/:id', component: RequestLineDetailComponent},
  
   {path: 'home', component: HomeComponent},
   {path: 'about', component: AboutComponent},

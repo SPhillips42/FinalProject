@@ -23,6 +23,15 @@ import { ProductCreateComponent } from './product/product-create/product-create.
 import { ProductDetailComponent } from './product/product-detail/product-detail.component';
 import { ProductEditComponent } from './product/product-edit/product-edit.component';
 import { ProductListComponent } from './product/product-list/product-list.component';
+import { SortPipe } from './system/sort.pipe';
+import { RequestCreateComponent } from './request/request-create/request-create.component';
+import { RequestDetailComponent } from './request/request-detail/request-detail.component';
+import { RequestEditComponent } from './request/request-edit/request-edit.component';
+import { RequestListComponent } from './request/request-list/request-list.component';
+import { RequestLineCreateComponent } from './requestLine/requestLine-create/requestLine-create.component';
+import { RequestLineDetailComponent } from './requestLine/requestLine-detail/requestLine-detail.component';
+import { RequestLineEditComponent } from './requestLine/requestLine-edit/requestLine-edit.component';
+import { RequestLineListComponent } from './requestLine/requestLine-list/requestLine-list.component';
   @NgModule({
   declarations: [
     AppComponent,
@@ -45,6 +54,15 @@ import { ProductListComponent } from './product/product-list/product-list.compon
     ProductDetailComponent,
     ProductEditComponent,
     ProductListComponent,
+    SortPipe,
+    RequestCreateComponent,
+    RequestDetailComponent,
+    RequestEditComponent,
+    RequestListComponent,
+    RequestLineCreateComponent,
+    RequestLineDetailComponent,
+    RequestLineEditComponent,
+    RequestLineListComponent,
   ],
   imports: [
     BrowserModule, AppRoutingModule, HttpClientModule, FormsModule

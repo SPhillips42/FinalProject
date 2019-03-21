@@ -7,16 +7,16 @@
   </div>
   <table class="table table-sm">
     <thead>
-      <td>Username</td>
-      <td>Name</td>
-      <td>Email</td>
-      <td>Phone</td>
+      <td><a (click)="sortBy('username')">Username</a></td>
+      <td><a (click)="sortBy('name')">Name</a></td>
+      <td><a (click)="sortBy('email')">Email</a></td>
+      <td><a (click)="sortBy('phone')">Phone</a></td>
       <td>Reviewer?</td>
       <td>Admin?</td>
       <td>Actions</td>
     </thead>
     <tbody>
-      <tr *ngFor="let user of users | search:searchCriteria" class="coldetail">
+      <tr *ngFor="let user of users | search:searchCriteria | sort: sortCriteria: sortOrder" class="coldetail">
           <td>{{user.username}}</td>
           <td>{{user.firstname}}</td>
           <td>{{user.email}}</td>

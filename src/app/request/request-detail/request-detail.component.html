@@ -1,0 +1,20 @@
+<span class="pageTitle">Request Detail </span>
+    <span class="create"> | <a routerLink="/requests/edit"></a> Edit</span>
+<div>
+<table *ngIf="request" class="table table-sm">
+    <tr><td>Description</td><td>{{request.description}}</td></tr>
+    <tr><td>Delivery Mode</td><td>{{request.deliveryMode}}</td></tr>
+    <tr><td>Submitted Date</td><td>{{request.submittedDate}}</td></tr>
+    <tr><td>Active</td><td class="bool">{{request.active}}</td></tr>
+    <tr><td>Active?</td><td>{{request.active}}</td></tr>
+    <tr><td>Total</td><td>{{request.total}}</td></tr>
+    <tr><td>User</td><td>{{request.user.firstname}}</td></tr>
+</table>
+<button (click)="setVerify()" class="btn btn-danger">SetDelete</button>
+<span *ngIf="verify">
+  <span>|</span>
+  <button (click)="delete()" class="btn btn-danger">VerifyDelete</button>
+</span>
+<span>|</span>
+<a routerLink="/requests/list">Return To list</a>
+</div>
