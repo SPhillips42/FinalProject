@@ -1,3 +1,34 @@
-<p>
-  request-edit works!
-</p>
+<div *ngIf="request" class="narrow">
+  <table class="table table-sm">
+    <tr>
+      <td>Description</td>
+      <td><input [(ngModel)]="request.description" class="inputstring" type="text"></td>
+    </tr>
+    <tr>
+      <td>Delivery Mode</td>
+      <td><input [(ngModel)]="request.deliveryMode" class="inputstring" type="text"></td>
+    </tr>
+    <tr>
+      <td>Submitted Date</td>
+      <td><input [(ngModel)]="request.name" class="inputstring" type="datetime"></td>
+    </tr>
+    <tr>
+      <td>Status</td>
+      <td><input [(ngModel)]="request.status" class="inputstring" type="text"></td>
+    </tr>
+    <tr>
+      <td>Total</td>
+      <td><input [(ngModel)]="request.total" class="inputstring" type="number"></td>
+    </tr>
+    <tr>
+      <td>User</td>
+      <td><input [(ngModel)]="request.user" class="inputstring" type="text"></td>
+    </tr>
+    <tr>
+      <td>Active</td>
+      <td><input [(ngModel)]="request.partNumber" class="inputstring" type="checkbox"></td>
+    </tr>
+  </table>
+  <span>
+      <button (click)="save()">Save</button>
+    </span>

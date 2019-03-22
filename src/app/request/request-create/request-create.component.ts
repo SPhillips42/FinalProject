@@ -13,7 +13,7 @@ export class RequestCreateComponent implements OnInit {
   requestArr: RequestClass[];
 
 save():void{
-  this.requestsvc.create(this.request).subscribe(
+  this.requestsvc.create("", this.request).subscribe(
     resp=> {
       console.log(resp)
       this.router.navigateByUrl("/requests/list");

@@ -1,3 +1,51 @@
-<p>
-  request-line-list works!
-</p>
+<app-menu></app-menu>
+<div>
+  <div class="heading">
+    <span class="pageTitle">Request List</span>
+    <span class="create">|<a routerLink="/requests/create">Create</a></span>
+  </div>
+  <table class="table table-sm">
+    <thead>
+      <td>Description</td>
+      <td>Delivery Mode</td>
+      <td>Submitted Date</td>
+      <td>Status</td>
+      <td>Active</td>
+      <td>Total</td>
+      <td>User</td>
+    </thead>
+    <tbody>
+      <tr *ngFor="let request of requests" class="coldetail">
+          <td>{{request.description}}</td>
+          <td>{{request.deliveryMode}}</td>
+          <td>{{request.submittedDate}}</td>
+          <td>{{request.status}}</td>
+          <td class="bool">{{request.active}}</td>
+          <td>{{request.total}}</td>
+          <td>{{request.user.firstname}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div>
+  <div class="heading">
+    <span class="pageTitle">RequestLine List</span>
+    <span class="create">|<a routerLink="/requestsLine/create">Create</a></span>
+  </div>
+  <table class="table table-sm">
+    <thead>
+      <td>Product</td>
+      <td>Quantity</td>
+      <td>Price</td>
+      <td>Line Total</td>
+    </thead>
+    <tbody>
+      <tr *ngIf="requests" class="coldetail">
+          <td>{{request.requestLines.name}}</td>
+          <td>{{request.requestLines.quantity}}</td>
+          <td>{{request.requestLines.total}}</td>
+          <td>{{request.requestLines.total}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -10,17 +10,17 @@ const url = "http://localhost:54371/api";
 })
 export class RequestLineService {
   list(): Observable<RequestLineClass[]>{
-    return this.http.get(`${url}/requests`) as Observable<any>;
+    return this.http.get(`${url}/requests/`) as Observable<any>;
   }
-  get(id: string): Observable<RequestLineClass>{
-    return this.http.get(`${url}/requests/${id}`) as Observable<any>;
+  get(productId: number): Observable<RequestLineClass>{
+    return this.http.get(`${url}/requests/${productId}`) as Observable<any>;
   }
   create(requestLine: RequestLineClass): Observable<any>
   {return this.http.post(`${url}/requests/`, requestLine) as Observable<any>};
   change(requestLine: RequestLineClass): Observable<any>
-  {return this.http.put(`${url}/requests/${requestLine.id}`, requestLine) as Observable<any>};
+  {return this.http.put(`${url}/requests/${requestLine.requestId}`, requestLine) as Observable<any>};
   remove(requestLine: RequestLineClass): Observable<any>
-  {return this.http.delete(`${url}/requests/${requestLine.id}`) as Observable<any>};
+  {return this.http.delete(`${url}/requests/${requestLine.requestId}`) as Observable<any>};
   
   constructor(private http: HttpClient) { }
 }
